@@ -6,7 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Development/Libraries
 Source0:	http://prdownloads.sourceforge.net/pslib/%{name}-%{version}.tar.gz
-# Source0-md5:	12cf52461658fe32524975896771b66d
+# Source0-md5:	ad7a8bf12ec2c2a0ed24f7e78e31a2f7
 URL:		http://pslib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
