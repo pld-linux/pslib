@@ -8,6 +8,8 @@ Group:		Development/Libraries
 Source0:	http://prdownloads.sourceforge.net/pslib/%{name}-%{version}.tar.gz
 # Source0-md5:	12cf52461658fe32524975896771b66d
 URL:		http://pslib.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
