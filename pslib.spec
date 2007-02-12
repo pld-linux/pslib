@@ -1,5 +1,5 @@
 Summary:	The pslib C-library to create PostScript on the fly
-Summary(pl):	Biblioteka do generowania w locie plików PostScript
+Summary(pl.UTF-8):   Biblioteka do generowania w locie plikÃ³w PostScript
 Name:		pslib
 Version:	0.2.5
 Release:	2
@@ -20,17 +20,17 @@ ligatures. It can read external Type1 fonts and embed them into the
 output file. It supports pdfmarks which makes it in combination with
 ghostscript's pdfwriter an alternative for libraries creating PDF.
 
-%description -l pl
-pslib to biblioteka C do tworzenia w locie plików PostScript. Oferuje
-rysowanie wielu prymitywów, w³±czanie obrazów PNG i EPS oraz bardzo
-wyszukane renderowanie tekstu w³±cznie z przenoszeniem, kerningiem i
-ligaturami. Mo¿e wczytywaæ zewnêtrzne fonty Type1 i osadzaæ je w pliku
-wyj¶ciowym. Obs³uguje pdfmarki, co, w po³±czeniu z pdfwriterem z
-ghostscripta, czyni j± alternatyw± dla bibliotek tworz±cych PDF.
+%description -l pl.UTF-8
+pslib to biblioteka C do tworzenia w locie plikÃ³w PostScript. Oferuje
+rysowanie wielu prymitywÃ³w, wÅ‚Ä…czanie obrazÃ³w PNG i EPS oraz bardzo
+wyszukane renderowanie tekstu wÅ‚Ä…cznie z przenoszeniem, kerningiem i
+ligaturami. MoÅ¼e wczytywaÄ‡ zewnÄ™trzne fonty Type1 i osadzaÄ‡ je w pliku
+wyjÅ›ciowym. ObsÅ‚uguje pdfmarki, co, w poÅ‚Ä…czeniu z pdfwriterem z
+ghostscripta, czyni jÄ… alternatywÄ… dla bibliotek tworzÄ…cych PDF.
 
 %package devel
 Summary:	Development files for the pslib C-library to create PostScript
-Summary(pl):	Pliki programistyczne dla biblioteki C pslib tworz±cej PostScript
+Summary(pl.UTF-8):   Pliki programistyczne dla biblioteki C pslib tworzÄ…cej PostScript
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -38,20 +38,20 @@ Requires:	%{name} = %{version}-%{release}
 Development files for the pslib C-library to create PostScript files
 on the fly.
 
-%description devel -l pl
-Pliki programistyczne dla biblioteki C pslib tworz±cej w locie pliki
+%description devel -l pl.UTF-8
+Pliki programistyczne dla biblioteki C pslib tworzÄ…cej w locie pliki
 PostScript.
 
 %package static
 Summary:	Static pslib library
-Summary(pl):	Statyczna biblioteka pslib
+Summary(pl.UTF-8):   Statyczna biblioteka pslib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description static
 Static pslib library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka pslib.
 
 %prep
