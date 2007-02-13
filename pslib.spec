@@ -1,5 +1,5 @@
 Summary:	The pslib C-library to create PostScript on the fly
-Summary(pl.UTF-8):   Biblioteka do generowania w locie plików PostScript
+Summary(pl.UTF-8):	Biblioteka do generowania w locie plików PostScript
 Name:		pslib
 Version:	0.2.5
 Release:	2
@@ -30,7 +30,7 @@ ghostscripta, czyni ją alternatywą dla bibliotek tworzących PDF.
 
 %package devel
 Summary:	Development files for the pslib C-library to create PostScript
-Summary(pl.UTF-8):   Pliki programistyczne dla biblioteki C pslib tworzącej PostScript
+Summary(pl.UTF-8):	Pliki programistyczne dla biblioteki C pslib tworzącej PostScript
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -44,7 +44,7 @@ PostScript.
 
 %package static
 Summary:	Static pslib library
-Summary(pl.UTF-8):   Statyczna biblioteka pslib
+Summary(pl.UTF-8):	Statyczna biblioteka pslib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
