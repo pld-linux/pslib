@@ -1,15 +1,17 @@
 Summary:	The pslib C-library to create PostScript on the fly
 Summary(pl.UTF-8):	Biblioteka do generowania w locie plików PostScript
 Name:		pslib
-Version:	0.2.5
-Release:	3
+Version:	0.4.1
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/pslib/%{name}-%{version}.tar.gz
-# Source0-md5:	12cf52461658fe32524975896771b66d
+# Source0-md5:	78693d87d89fe7fcc7bc45e54b7b64a6
+Patch0:		%{name}-getline.patch
 URL:		http://pslib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -56,8 +58,10 @@ Statyczna biblioteka pslib.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -90,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 %{_includedir}/*
 %{_pkgconfigdir}/*
+%{_mandir}/man3/*.3*
 
 %files static
 %defattr(644,root,root,755)
