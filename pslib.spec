@@ -11,6 +11,11 @@ Patch0:		%{name}-getline.patch
 URL:		http://pslib.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	docbook-to-man
+BuildRequires:	docbook-utils
+BuildRequires:	gettext-devel
+BuildRequires:	glib2-devel
+BuildRequires:	intltool
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
