@@ -94,17 +94,19 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libps.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libps.so.0
 %{_datadir}/%{name}
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/*
-%{_pkgconfigdir}/*
-%{_mandir}/man3/*.3*
+%attr(755,root,root) %{_libdir}/libps.so
+%{_libdir}/libps.la
+%{_includedir}/libps
+%{_pkgconfigdir}/libps.pc
+%{_mandir}/man3/pslib.3*
+%{_mandir}/man3/PS_*.3*
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libps.a
