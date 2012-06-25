@@ -3,12 +3,12 @@ Summary(pl.UTF-8):	Biblioteka do generowania w locie plików PostScript
 Name:		pslib
 Version:	0.4.5
 Release:	1
-License:	LGPL
+License:	LGPL v2+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/pslib/%{name}-%{version}.tar.gz
 # Source0-md5:	03f39393628a6d758799b9f845047e27
 URL:		http://pslib.sourceforge.net/
-BuildRequires:	autoconf >= 2.50
+BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	docbook-to-man
 BuildRequires:	docbook-utils
@@ -71,6 +71,7 @@ Statyczna biblioteka pslib.
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
@@ -91,7 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_libdir}/libps.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libps.so.0
 %{_datadir}/%{name}
