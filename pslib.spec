@@ -13,7 +13,7 @@ BuildRequires:	automake
 BuildRequires:	docbook-to-man
 BuildRequires:	docbook-utils
 BuildRequires:	gettext-devel
-BuildRequires:	giflib-devel
+BuildRequires:	giflib4-devel
 BuildRequires:	glib2-devel
 BuildRequires:	intltool
 BuildRequires:	libjpeg-devel
@@ -82,6 +82,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libps.la
+
 %find_lang %{name}
 
 %clean
@@ -100,7 +102,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libps.so
-%{_libdir}/libps.la
 %{_includedir}/libps
 %{_pkgconfigdir}/libps.pc
 %{_mandir}/man3/pslib.3*
