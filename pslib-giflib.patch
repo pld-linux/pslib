@@ -1,0 +1,18 @@
+--- pslib-0.4.5/src/pslib.c.orig	2011-03-29 11:12:25.000000000 +0200
++++ pslib-0.4.5/src/pslib.c	2014-02-01 16:48:19.912189358 +0100
+@@ -4906,13 +4906,13 @@
+ 		}
+ 		memset(psimage, 0, sizeof(PSImage));
+ 
+-		if ((gft = DGifOpenFileName(filename)) == NULL) {
++		if ((gft = DGifOpenFileName(filename, NULL)) == NULL) {
+ 			ps_error(psdoc, PS_RuntimeError, _("%s is not a gif file!"), filename);
+ 			fclose(fp);
+ 			return(0);
+ 		}
+ 		if (DGifSlurp(gft) != GIF_OK) {
+-			ps_error(psdoc, PS_RuntimeError, _("Error %d while reading gif file!"), GifLastError());
++			ps_error(psdoc, PS_RuntimeError, _("Error %d while reading gif file!"), gft->Error);
+ 			fclose(fp);
+ 			return(0);
+     }
