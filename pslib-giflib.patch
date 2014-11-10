@@ -16,3 +16,30 @@
  			fclose(fp);
  			return(0);
      }
+@@ -4939,7 +4939,7 @@
+ 
+ 		if(NULL == (psimage->palette = psdoc->malloc(psdoc, sizeof(PSColor) * numcolors, _("Allocate memory for color palette.")))) {
+ 			ps_error(psdoc, PS_MemoryError, _("Could not allocate memory for color palette."));
+-			DGifCloseFile(gft);
++			DGifCloseFile(gft, NULL);
+ 			psdoc->free(psdoc, psimage);
+ 			fclose(fp);
+ 			return(0);
+@@ -4964,7 +4964,7 @@
+ 		psimage->length = psimage->width * psimage->height;
+ 		if(NULL == (psimage->data = psdoc->malloc(psdoc, psimage->length, _("Allocate memory for image data.")))) {
+ 			ps_error(psdoc, PS_MemoryError, _("Could not allocate memory for image data."));
+-			DGifCloseFile(gft);
++			DGifCloseFile(gft, NULL);
+ 			psdoc->free(psdoc, psimage->palette);
+ 			psdoc->free(psdoc, psimage);
+ 			fclose(fp);
+@@ -4998,7 +4998,7 @@
+ 			memcpy(psimage->data, dataptr, psimage->length);
+ 		}
+ 
+-		DGifCloseFile(gft);
++		DGifCloseFile(gft, NULL);
+ 
+ 	} else
+ #endif /* HAVE_LIBGIF */
