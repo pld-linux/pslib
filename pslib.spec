@@ -13,7 +13,7 @@ BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	docbook-to-man
 BuildRequires:	docbook-utils
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	giflib-devel >= 5
 BuildRequires:	glib2-devel
 BuildRequires:	intltool
